@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bucket List</title>
+    <style>
+        body {
+            font-family: Serif;
+            background-color: #FFEDFA;
+        }
+        button {
+            width: 233px;
+            height: 50px;
+            font-size: 1.2em;
+            color: #FFEDFA;
+            background-color: #EC7FA9;
+            border-color: #BE5985;
+            border-radius: 20px;
+        }
+        #content {
+            margin: 10px;
+        }
+        .container {
+            border-style: solid;
+            border-color: #BE5985;
+            background-color: #FFB8E0;
+            height: auto;
+            width: 700px;
+            margin-top: 10px;
+            border-radius: 20px;
+        }
+        h2 {
+            color: #BE5985;
+            font-size: 1.8em;
+        }
+        li {
+            color: #BE5985;
+            font-size: 1.2em;
+        }
+        p {
+            color: #BE5985;
+            font-size: 1.2em;
+            background-image: url('img_girl.jpg');
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="content-list">
+            <h2 id="title"><center>Raine's Bucket List ( ˶ˆᗜˆ˵ )</center></h2>
+            <ul>
+                <li>Buy a house.</li>
+                <li>Travel abroad.</li>
+                <li>Get a pet cat.</li>
+                <li>Learn to cook.</li>
+            </ul>
+        </div>
+    </div>
+
+<!-- Input Field -->
+<p>Add new bucket list: <input type="text" id="newList" placeholder="Type here"></p>
+
+<!-- Button to change styles -->
+<button id="demoButton" onclick="changeFontStyle()">Change font family</button>
+<button id="demoButton" onclick="changeFontWeight()">Change font weight</button>
+<button id="demoButton" onclick="addNewElement()">Add new item</button>
+
+<!-- Functions -->
+<script>
+    function changeFontStyle() {
+        document.querySelector('ul').style.fontFamily = 'Georgia,serif';
+    }
+
+    function changeFontWeight() {
+        document.querySelector('ul').style.fontWeight = 'bold';
+    }
+
+    function addNewElement() {
+        var myInput = document.getElementById("newList").value;
+        var ul = document.querySelector('ul');
+        var li = document.createElement('li');
+        li.appendChild(document.createTextNode(myInput));
+        ul.appendChild(li);
+    }
+
+</script>
+</body>
+</html>
